@@ -5,11 +5,6 @@ README for ColladaFragmenter
 ColladaFragmenter by Owen Mundy owenmundy.com
 
 
-License
--------
-This code is in the public domain
-
-
 Description
 -------
 Parse a 3D COLLADA (.dae) file and export a set number of geometries as new COLLADA (.dae) files.
@@ -28,5 +23,5 @@ The difference in speed is dramatic. For example...
 Usage
 -------
 
-    $ColladaFragmenter = new ColladaFragmenter();
-    $ColladaFragmenter->fragment($importfile, 44, 53, true, false, $exportdir);
+    $cf = new ColladaFragmenter();
+    $cf->fragment($importfile, 44, 53, true, false, $exportdir);
