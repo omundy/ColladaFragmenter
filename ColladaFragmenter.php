@@ -2,15 +2,15 @@
 
 /**
  *	ColladaFragmenter by Owen Mundy owenmundy.com
- *	Parse a collada file and export a set number of geometries
+ *	Parse a 3D COLLADA file and export a set number of geometries
  *	PHP 5.3+ recommended, SimpleXML support required
- *  This code is in the public domain
+ *	Copyright (c) 2012 Owen Mundy <omundy@gmail.com>
  */
 
 class ColladaFragmenter {
 	
 	/**
-	 *	fragment()
+	 *	fragment() 			Parse a 3D COLLADA file and export a set number of geometries		
 	 *
 	 *	@param $file String The COLLADA (.dae) file to use
 	 *	@param $start Int	Start from nth geometry
@@ -18,11 +18,9 @@ class ColladaFragmenter {
 	 *						 9 = start with 10th geometry
 	 *						-1 = start with last geometry and go backwards
 	 *	@param $end Int 	Stop on nth geometry
-	 *	@param $rand Bool 	Whether or not geometries will be chosen at random
-	 *						 - true = choose fragments randomly
-	 *						 - false = choose fragments in sequence
 	 *	@param $save Bool	Whether or not to save COLLADA to a file
 	 *	@param $show Bool	Whether or not to show contents of COLLADA
+	 *	@param $export_dir String 	Directory where fragments will be saved
 	 */
 	public function fragment($file, $start, $end, $save=false, $show=true, $export_dir='export/')
 	{
