@@ -36,10 +36,10 @@ class ColladaFragmenter {
 		$filename_append = '';
 		
 		// get file
-		if ($contents = file_get_contents($file))
+		if (file_exists($file) && $contents = file_get_contents($file))
 		{
 			// store as XML
-			if ($collada = new SimpleXMLElement($contents))	
+			if (isset($contents) && $collada = new SimpleXMLElement($contents))	
 			{
 				// Since we're only interested in the geometries from the Collada file,
 				// we store all geometries, and then use the ids of the geometries to 
@@ -127,18 +127,26 @@ class ColladaFragmenter {
 				
 				
 				// REPORT
-				print "\n\n------------------------------------------------------------------\n\n";
+				print "\n\n--COLLADA FILE(S) EXPORTED----------------------------------------\n\n";
 				
-				print "$ import file \t= $file\n";
+				print "$ import file \t= \"$file\"\n";
 				
-				print "$ geometries requested \t= $start-$end\n";
 				print "$ total geometries \t= " . $collada->library_geometries->geometry->count() . "\n";
+				print "$ geometries requested \t= $start-$end\n";
 				print "$ geometries exported \t= " . $count . "\n";
 				
-				print "$ export file \t= " . $exportfile . "";
+				print "$ export file \t= \"" . $exportfile . "\"";
 	
 				print "\n\n------------------------------------------------------------------\n\n";
+			} 
+			else 
+			{
+				die("\nERROR: \"Problem creating new SimpleXML\"\n\n");
 			}
+		} 
+		else 
+		{
+			die("\nERROR: \"File not found\"\n\n");
 		}
 	}
 }
