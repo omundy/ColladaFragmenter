@@ -14,7 +14,7 @@ Requirements
 -------
 PHP 5.3+ recommended, SimpleXML support required
 
-It is imperative that you run this application from the command line if possible. 
+I recommend you run this application from the command line if possible. 
 The difference in speed is dramatic. For example...
 
     $ php file.php
