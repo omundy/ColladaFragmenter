@@ -4,7 +4,7 @@
  *	ColladaFragmenter by Owen Mundy owenmundy.com
  *	Parse a 3D COLLADA file and export a set number of geometries
  *	PHP 5.3+ recommended, SimpleXML support required
- *	Copyright (c) 2012 Owen Mundy <omundy@gmail.com>
+ *	Copyright (c) 2012 Owen Mundy
  */
 
 class ColladaFragmenter {
