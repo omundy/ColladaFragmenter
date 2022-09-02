@@ -2,7 +2,7 @@
 # ColladaFragmenter
 
 
-![thumb](assets/img/bauhaus-1-66-with-code.png)
+![thumb](assets/img/2012-colladafragmenter-bauhaus-1-66-with-code.png)
 
 
 
